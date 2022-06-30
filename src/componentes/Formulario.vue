@@ -115,14 +115,13 @@
         try {
           let usuarioIngresado = {...this.formData}
           await this.axios.post(this.url, usuarioIngresado, {'content-type':'application/json'} )
-          this.$emit('usuarioEnviado', usuarioIngresado)
         }
         catch(error) {
           console.error('Error en postUsuario', error.message)
         }
         this.formData = this.getInitialData()
         this.formState._reset()
-        location.reload();
+        // location.reload();
       },
     },
     computed: {

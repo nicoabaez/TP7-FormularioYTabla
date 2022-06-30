@@ -1,19 +1,17 @@
 <template>
   <div class="container-fluid mt-5">
-    <Formulario  />
-    <Tabla       />
+    <Navbar  />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Formulario from './componentes/Formulario.vue'
-import Tabla from './componentes/Tabla.vue'
+import Navbar from '/src/componentes/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    Formulario,
-    Tabla
+    Navbar
   },
 }
 </script>
